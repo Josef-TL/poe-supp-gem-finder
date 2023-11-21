@@ -1,9 +1,6 @@
-console.log("Hi")
-
-
 const button = document.querySelector('button');
-const input = document.querySelector('input');
-
+const textInput = document.querySelector('#fridge');
+const apiInput = document.querySelector('#api-input')
 const olElement = document.querySelector('#gem-list');
 
 
@@ -23,10 +20,10 @@ function commasToList(string) {
 
 button.addEventListener("click", () => {
     button.disabled = true
-    fetchText(input.value)
+    fetchText(textInput.value,apiInput.value)
         .then(generatedText =>{
-            console.log(generatedText)
             commasToList(generatedText)
+            button.disabled = false
         })
 
 });

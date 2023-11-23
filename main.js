@@ -1,7 +1,9 @@
 const button = document.querySelector('button');
-const textInput = document.querySelector('#fridge');
+const textInput = document.querySelector('#gem');
 const apiInput = document.querySelector('#api-input')
 const olElement = document.querySelector('#gem-list');
+const formElement = document.querySelector("form")
+
 
 
 function commasToList(string) {
@@ -28,6 +30,8 @@ button.addEventListener("click", () => {
 
 });
 
-
+textInput.addEventListener("input",(e)=>{if (e.code === "Enter") {  //checks whether the pressed key is "Enter"
+    console.log("HI")}
+})
 
 
